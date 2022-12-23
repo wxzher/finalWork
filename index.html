@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diary Website</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 引入bootstrap 样式文件 -->
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css" />
+    <!-- 引入重置样式表 -->
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/ad1c705c3a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="" id="logo"> 
+      </div>
+      <div class="drop-menu visible-xs">
+        <a href="javascript:void(0)">手记</a>
+      <ul>
+        <li><a href="#">流年叙</a></li>
+        <li><a href="#">陈列馆</a></li>
+        <li><a href="#">茶话会</a></li>
+        <li><a href="#">个人证</a></li>
+      </ul>
+    </div>
+      <ul class="nav">
+        <li><a href="#" class="active home hidden-xs" id="active">流年叙</a></li>
+        <li>
+          <a href="html/display.html" target="other" class="other hidden-xs">陈列馆</a>
+        </li>
+        <li>
+          <a href="html/debate.html" target="other" class="other hidden-xs">茶话会</a>
+        </li>
+        <li>
+          <a href="html/me.html" target="other" class="other hidden-xs">个人证</a>
+        </li>
+      </ul>
+    </header>
+    <section>
+      <img src="images/bird1.png" id="bird1" />
+      <img src="images/bird2.png" id="bird2" />
+      <img src="images/kunpeng.png" id="kunpeng" />
+      <img src="images/door.png" alt="" id="door">
+      <img src="images/xingzheng.png" alt="" id = "xingzheng">
+      <!-- <img src="images/background.png" alt=""> -->
+      <img src="images/title1.png" alt="" id="title1">
+      <img src="images/title2.png" alt="" id="title2">
+      <a href="#sec" id="btn">Explore</a>
+     
+    </section>
+    <div class="sec" id="sec">
+      <div class="intro">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text active-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p><strong>刘XX，</strong> 1937年7月，日寇侵凌华夏，国土节节沦陷。次年初，武汉形势危急。值此紧要关头，武汉大学于2月21日召开第322次校务会议，商议迁校事宜，决定迁至四川乐山。自古云：“蜀道难，难于上青天。”武大师生于民族危难、山河破碎之际开始了艰难的西行之路。1938年3月，部分教职工与学生共600余人，分批乘船溯江而上，一路栉风沐雨，几经辗转，终到嘉州。由是武大师生日与大佛相邻，夜以三江为伴，弦歌不绝，以至八载。</p><span>刘？？</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>
+                      <strong>刘宏，</strong>
+                      湖南长沙人，随父客居湖北，78级年考入武大中文系，应届生。毕业后赴湖南某报纸当编辑，几年后赴京，在中央级某大报工作，为该报参与创业和改制的骨干中坚之一，曾任编辑、记者等多个岗位。待同学诚恳自然，性格活泼开朗，热闹必趋之。业余喜网游，曾因网站结识忘年交好友。</p><span>刘宏</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p><strong>刘明松，</strong>1976年出生于武汉，1995年进入武汉水利电力大学（现武汉大学工学部）就读，后在本校一并获得硕士与博士学位，毕业后自行创业，小有成就；为人亲和乐观，热爱文学，曾亲身经历武大四校合并和新冠疫情攻坚战时期，情深义重，心系国家与母校。</p><span>刘明松</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/章北海.webp" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/罗辑.webp" class="user-pic" onclick="showReview()">
+                <img src="images/史强.webp" class="user-pic" onclick="showReview()">
+                 </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row" >
+        <div class="col-md-9">
+          <h2 class="wow animate__animated animate__bounce">刘？？的日记</h2>
+        </div>
+        <div class="col-md-3">
+          第二部分
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-md-9">
+          <i class="fas fa-quote-left"></i>
+          <h4>1940年10月12日  星期六 晴</h4>
+          <p class="animated rubberBand"> 
+跨入国立武汉大学之时我是一个穷学生，抗日战火已经燃烧到湖南，家乡长沙已被国民党政府按焦土抗战政策用大火焚烧殆尽。大学发榜较晚，我10月12日才启程，选择了资费较廉的水路赴校。但因水浅暂无轮船驶往乐山，大伙儿合包了一个桨划木船，抢时间夜间启航。因为水浅滩多，在岷江逆流行驶船工们劳力消费很大，难以延续行驶，以致百余公里路程竟走了8天。到校后虽晚了几天，但学校仍批准我们注册入校，不久后我就被批准获得乙种贷金，堪供当时门生低标准膳食之需，而门生学费和宿费一向是免收的。从此我可以安心肄业了。
+          </p>
+          <h2 class="
+          wow fadeInUps
+          ">刘？？的日
+          记</h2>
+          <i class="fas fa-quote-right"></i>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </div>
+    
+
+    <script>
+        let userTexts=document.getElementsByClassName("user-text")
+        let userPics=document.getElementsByClassName("user-pic")
+function showReview(){
+    for(userPic of userPics){
+        userPic.classList.remove("active-pic")
+    }
+    for(userText of userTexts){
+        userText.classList.remove("active-text")
+    }
+    let i=Array.from(userPics).indexOf(event.target)
+    userPics[i].classList.add("active-pic")
+    userTexts[i].classList.add("active-text")
+}
+// 2.初始化
+        // 如果不为ie6-9的浏览器，则进行一个初始化
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            new WOW().init();
+        };
+
+
+
+    </script>
+    </div>
+    <iframe name="other" frameborder="0" class="frame" id="frame"></iframe>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+     
+  
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.cn/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="js/wow.js"></script>
+  </body>
+  </body>
+</html>

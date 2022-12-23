@@ -1,0 +1,332 @@
+/* 这是引入了一些字体 */
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时 */
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  //   背景颜色
+  // background: linear-gradient(#2b1055, #7597de);
+  // background-image: url("../images/background.png");
+  background-position: center center;
+  /* 背景图不平铺 */
+  background-repeat: no-repeat;
+  /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+  background-attachment: fixed;
+  /* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  @media screen and (max-width: 767px) {
+    padding: 30px 50px;
+  }
+}
+
+header .logo {
+  width: 20vw;
+  height: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+  }
+}
+header #logo {
+  width: 100%;
+}
+header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header .nav li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header .nav li a:hover,
+header .nav li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+.drop-menu {
+  width: 80px;
+  font: 400 1em Open Sans, sans-serif;
+  position: absolute;
+  top: 10vh;
+  right: 10vw;
+  //margin: 0 0 ;
+  padding: 0;
+}
+.drop-menu > a {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  padding: 0 1em;
+  height: 3em;
+  line-height: 2.25em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #555;
+}
+.drop-menu > a:after {
+  content: "";
+  position: relative;
+  top: 11px;
+  left: 6px;
+  height: 0;
+  width: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #555;
+}
+.drop-menu.active ul {
+  display: block !important;
+}
+.drop-menu ul {
+  z-index: 1;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  margin: 0;
+  padding: 3em 0 1em;
+  /*width: 100%;*/
+  list-style: none;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+.drop-menu ul li:first-child {
+  border-top: 1px solid #e9e9e9;
+}
+.drop-menu li a {
+  color: #555;
+  display: block;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+}
+.drop-menu li a:hover {
+  background: #155fb0;
+  color: #fff;
+  text-decoration: none;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("../images/background.png");
+  background-position: center center;
+  /* 背景图不平铺 */
+  background-repeat: no-repeat;
+  /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+  background-attachment: fixed;
+  /* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  /* object-fit CSS 属性指定可替换元素（例如：<img> 或 <video>）的内容应该如何适应到其使用高度和宽度确定的框。 */
+  object-fit: cover;
+  pointer-events: none;
+}
+section #xingzheng {
+  // mix-blend-mode: screen;
+  width: 45%;
+  bottom: 2vh;
+  right: 0vw;
+  z-index: 100;
+  @media screen and (max-width: 767px) {
+    width: 55%;
+    margin-bottom: 20vh;
+  }
+}
+section #kunpeng {
+  // mix-blend-mode: screen;
+  width: 35%;
+  min-width: 200px;
+  top: 3vh;
+  left: 15vw;
+  // z-index: 100;
+  @media screen and (max-width: 767px) {
+    width: 55%;
+    margin-top: 20vh;
+  }
+}
+@keyframes doormove {
+  0% {
+    transform: rotate(20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+section #door {
+  // mix-blend-mode: screen;
+  width: 35%;
+  bottom: 5vh;
+  left: 0vw;
+  // z-index: 100;
+  // animation-name: doormove;
+  // animation-duration: 5s;
+  // animation-timing-function: linear;
+  // animation-delay: 2s;
+  // animation-iteration-count: 1;
+  // animation-direction: alternate;
+  @media screen and (max-width: 767px) {
+    width: 45%;
+    margin-bottom: 20vh;
+  }
+}
+
+section #bird1 {
+  /* mix-blend-mode CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。 */
+  // mix-blend-mode: screen;
+  width: 20vw;
+  top: 30vh;
+  left: -2vw;
+}
+section #bird2 {
+  /* mix-blend-mode CSS 属性描述*/
+  // mix-blend-mode: screen;
+  width: 30vw;
+  top: 10vh;
+  right: 10vw;
+}
+section #title1 {
+  width: 18vw;
+  top: 15vh;
+  right: 30vw;
+  @media screen and (max-width: 767px) {
+    width: 20vw;
+    top: 5vh;
+    right: 40vw;
+  }
+}
+section #title2 {
+  width: 18vw;
+  bottom: 10vh;
+  left: 35vw;
+}
+
+#text {
+  position: absolute;
+  right: -350px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(350px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  display: block;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.container {
+  // border: 10px solid red;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  background: #ede9e1;
+}
+.container .row  {
+  height: 350px;
+}
+
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.sec p {
+  font-size: 1em;
+  color: black;
+}
+
+.frame {
+  display: none;
+  width: 100vw;
+  min-height: 500vh;
+}
+.footer {
+  background-color: #155fb0;
+}
